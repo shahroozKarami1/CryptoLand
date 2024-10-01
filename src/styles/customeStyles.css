@@ -1,0 +1,40 @@
+.hero_header--section {
+  background-image: url(/public/Images/HeroBackground.png);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: block;
+  height: 100%;
+}
+
+/* :root {
+    --primary-color: #8761a8;
+    --secondary-color: #ffffff;
+    --title-color: #51475a;
+    --text-color: #808080;
+  } */
+
+/* تغییر عرض اسکرول‌بار */
+::-webkit-scrollbar {
+  width: 12px;
+}
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+/* تغییر استایل پس‌زمینه اسکرول‌بار */
+::-webkit-scrollbar-track {
+  background: #8761a8;
+}
+
+/* تغییر استایل خود اسکرول */
+::-webkit-scrollbar-thumb {
+  background: var(--secondary-color);
+  border-radius: 6px;
+}
+
+/* تغییر استایل هنگام هاور کردن روی اسکرول */
+::-webkit-scrollbar-thumb:hover {
+  /* background: var(--text-color); */
+  cursor: grab;
+}

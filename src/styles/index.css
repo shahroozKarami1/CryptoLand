@@ -1,0 +1,21 @@
+@import url(./font.css);
+@import url(./reset.css);
+@import url(./variable.css);
+@import url(./customeStyles.css);
+/* Tailwind */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* ,  body {
+  font-family: AzarMehr  ;
+  direction: rtl;
+  outline: 0;
+  transition: all;
+  border: 0;
+}
+.number  {
+  font-family:AzarMehrDigit ;
+}
+
+/* https://demo.gostaranweb.com/Cryptoland/ */

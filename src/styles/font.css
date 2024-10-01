@@ -1,0 +1,13 @@
+@font-face {
+  font-family: AzarMehr;
+  src: url(../../public/fonts/AzarMehr/AzarMehr-Medium.woff2),
+    url(../../public/fonts/AzarMehr/AzarMehr-Bold.woff2),
+    url(../../public/fonts/AzarMehr/AzarMehr-Light.woff2),
+    url(../../public/fonts/AzarMehr/AzarMehr-Black.woff2),
+    url(../../public/fonts/AzarMehr/AzarMehr-ExtraBold.ttf) , 
+
+}
+@font-face {
+  font-family: AzarMehrDigit;
+  src: url(../../public/fonts/AzarMehr/AzarMehr-FD-Medium.ttf);
+}
