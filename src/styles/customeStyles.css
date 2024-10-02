@@ -38,3 +38,17 @@
   /* background: var(--text-color); */
   cursor: grab;
 }
+.topicBox {
+  max-width: 450px;
+}
+
+.topic-styles__before::before {
+  content: "";
+  position: absolute;
+  right: -53px;
+  bottom: 8px;
+  width: 46px;
+  height: 3px;
+  background-color: var(--topic-color);
+}
+
