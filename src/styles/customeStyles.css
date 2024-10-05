@@ -52,3 +52,32 @@
   background-color: var(--topic-color);
 }
 
+.servicesSection {
+  background-image: url(/public/Images/big-triangle-bg-right.png);
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.HowToUse  {
+  background-image: url(/public/Images/background-HowToUse.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  display: block;
+  padding: 4rem  0;
+}
+
+.HowToUseDetails::after {
+content:url(/public/Images/HowToUse/flash.svg) ;
+position: absolute;
+left: 103px;
+}
+.customLine {
+  position: absolute;
+  width: 20px;
+  height: 5px;
+  right: -23px;
+  transform: translateY(15px);
+  border-radius: 1rem;
+}

@@ -25,3 +25,13 @@ export interface IAboutUs {
   img: string;
   component: JSX.Element;
 }
+export default interface IservicesSection {
+  color: string;
+  icon: string;
+  title: string;
+  desc: string;
+}
+export interface HowToUseDetailsProps {
+  icon: string;
+  title: string;
+}
