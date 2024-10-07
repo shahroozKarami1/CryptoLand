@@ -4,4 +4,5 @@
   --title-color: #51475a;
   --text-color: #808080;
   --topic-color: #f09791;
+  --base-gradient-color: linear-gradient(to right, #8761a8, #f4929b);
 }

@@ -81,3 +81,24 @@ left: 103px;
   transform: translateY(15px);
   border-radius: 1rem;
 }
+.heartChart {
+  background-image: url(/public/Images/chart/batProgress.jpg);
+  background-repeat: no-repeat;
+  border-radius: 0.5rem;
+  width: 700px;
+  height: 100%;
+}
+.appContent {
+  background-image: url(/public/Images/Android/bg-Phone.png);
+  background-position: right;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.borderDocs  {
+  border: 1px  solid  #ccc;
+}
+.activeDoc:hover {
+  transform: translateY(-10px);
+  border: 1px  solid  #000;
+  transition: all  0.25s  ease;
+}

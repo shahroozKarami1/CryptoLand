@@ -35,3 +35,21 @@ export interface HowToUseDetailsProps {
   icon: string;
   title: string;
 }
+export interface StatisticsProps {
+  title: string;
+  statistics: number;
+  color: string;
+}
+export interface IMainQuestionsProps {
+  title: string;
+  disc: string;
+}
+export interface IDocsProps {
+  title: string;
+}
+export interface IConsltantsProps {
+  cover: string;
+  name: string;
+  jobPosition: string;
+  socialMediaIcon: string;
+}

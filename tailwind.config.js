@@ -10,6 +10,7 @@ export default {
         inputColor: "#BE96BC",
         topicColor: "#F09791",
         titleColor: "#51475a",
+        
       },
       padding: {
         DEFAULT: "1rem",

@@ -13,7 +13,7 @@ const AboutUs: FC<IAboutUs> = ({ img, reverse ,  component }) => {
        {component}
         </div>
         <div>
-          <img src={img} alt="" className="mx-auto" />
+          <img src={img}  />
         </div>
       </div>
     </main>

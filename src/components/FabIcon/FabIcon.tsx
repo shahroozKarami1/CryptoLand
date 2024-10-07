@@ -9,15 +9,18 @@ const CustomBox = styled(Box)({
 });
 const FabIcon = () => {
   function scrollHandler() {
-    if (window.scrollY > 0) {
-      window.scrollY = 0;
-    }
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
   }
   return (
     <CustomBox>
       <Fab
         onClick={scrollHandler}
-        sx={{ backgroundImage: "linear-gradient(to right, #8761a8, #f4929b)" }}
+        sx={{
+          backgroundImage: ` var(--base-gradient-color)`,
+        }}
       >
         <ArrowUpwardIcon sx={{ color: "#fff" }} />
       </Fab>
