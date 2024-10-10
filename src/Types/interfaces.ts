@@ -1,3 +1,4 @@
+import { jsx } from "@emotion/react";
 import { ReactNode } from "react";
 
 export interface INavLink {
@@ -28,12 +29,14 @@ export interface IAboutUs {
 export default interface IservicesSection {
   color: string;
   icon: string;
+  delay  :  number
   title: string;
   desc: string;
 }
 export interface HowToUseDetailsProps {
   icon: string;
   title: string;
+  delay :  number
 }
 export interface StatisticsProps {
   title: string;
@@ -46,10 +49,33 @@ export interface IMainQuestionsProps {
 }
 export interface IDocsProps {
   title: string;
+  delay :  number
 }
 export interface IConsltantsProps {
   cover: string;
   name: string;
   jobPosition: string;
   socialMediaIcon: string;
+  delay  :  number
 }
+export interface ITeamWorkData {
+  id: number;
+  cover: string;
+  name: string;
+  workPosition: string;
+}
+export interface  IBoxNewsProps {
+  id  :  number  ;  
+  disc  :  string  ; 
+  logo :  string
+ }
+ export  interface ILiseneseIconsProps  {
+   icon :  JSX.Element  ,  
+ }
+ export  interface ITitleSectionProps  {
+  topic   :  string  ;
+  title : string   ;  
+  direction  :   "center"  |  "right"  ;  
+  isAfter :  boolean
+
+ }

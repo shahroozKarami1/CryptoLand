@@ -6,9 +6,12 @@ const ServicesSection: FC<IservicesSection> = ({
   desc,
   icon,
   title,
+  delay
 }) => {
   return (
     <div
+    data-aos="fade-up"
+    data-aos-delay={delay}
       className="flex  flex-col  items-center     gap-6  rounded-md    p-5 "
       style={{ border: `4px  solid  ${color}` }}
     >

@@ -46,7 +46,7 @@ const NavBar = () => {
 
   return (
     <div
-      className={`container mt-4 py-2 transition-all duration-500 ease-in-out ${
+      className={`container mt-4 py-2 transition-all duration-500 ease-in-out     ${
         isScroll ? "sticky top-0 bg-white shadow-lg" : "absolute top-0 bg-transparent"
       } z-50`}
     >

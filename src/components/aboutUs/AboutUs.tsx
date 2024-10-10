@@ -9,7 +9,7 @@ const AboutUs: FC<IAboutUs> = ({ img, reverse ,  component }) => {
           reverse && "flex-row-reverse"
         }  `}
       >
-        <div>
+        <div  data-aos= {`${reverse  ? "fade-right"  :  "fade-left" }`}>
        {component}
         </div>
         <div>

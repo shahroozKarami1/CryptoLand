@@ -2,7 +2,7 @@
 function OfferToken() {
   return (
     <main>
-        <div  className="flex  flex-col  gap-5 mr-5  ">
+        <div  className="flex  flex-col  gap-5 mr-5  "  data-aos = "fade-left">
             <span className="text-topicColor relative  topic-styles__before font-bold">درباره ما</span>
             <h1  className="text-titleColor text-3xl font-bold   mb-4">حراج  توکن</h1>
               <table  className="flex  gap-4">

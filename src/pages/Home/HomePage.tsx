@@ -11,6 +11,13 @@ import Statistics from "../../components/Statistics/Statistics";
 import TopicBox from "../../components/TopicBox/TopicBox";
 import OfferToken from "../../components/OfferToken/OfferToken";
 import Docs from "../../components/docs/Docs";
+import Consltants from "../../components/Consltants/Consltants";
+import MyTeam from "../../components/MyTeam/MyTeam";
+import News from "../../components/News/News";
+import Lisenese from "../../components/Lisenese/Lisenese";
+import Footer from "../../components/Footer/Footer";
+import Collebrations from "../../components/Collebrations/Collebrations";
+import TitleSection from "../../assets/titleSection/TitleSection";
 
 const HomePage = () => {
   return (
@@ -66,9 +73,16 @@ const HomePage = () => {
         }
       />
       <div className="container p-lg servicesSection">
+        <TitleSection
+          direction="center"
+          isAfter={false}
+          topic="خدمات عالی"
+          title="خدمات عالی"
+        />
         <div className="grid grid-cols-12 gap-5">
           <div className="col-span-2 col-start-3">
             <ServicesSection
+              delay={200}
               icon="/public/Images/servicesImage/service-icon-1.svg"
               color="#16BF86"
               title="برنامه کرایپ تو لند"
@@ -77,6 +91,7 @@ const HomePage = () => {
           </div>
           <div className="col-span-2">
             <ServicesSection
+              delay={400}
               icon="/public/Images/servicesImage/service-icon-2.svg"
               color="#5874CF"
               title="خدمات معدن"
@@ -85,6 +100,7 @@ const HomePage = () => {
           </div>
           <div className="col-span-2">
             <ServicesSection
+              delay={600}
               icon="/public/Images/servicesImage/service-icon-3.svg"
               color="#F09790"
               title="بلوک های زنجیره ای"
@@ -93,6 +109,7 @@ const HomePage = () => {
           </div>
           <div className="col-span-2">
             <ServicesSection
+              delay={800}
               icon="/public/Images/servicesImage/service-icon-4.svg"
               color="#FFAE57"
               title="تبادل"
@@ -163,6 +180,12 @@ const HomePage = () => {
       <ChartMe />
       <div>
         <div className="container p-xl ">
+          <TitleSection
+            direction="center"
+            isAfter={false}
+            title="سوالات  متداول"
+            topic="سوالات متداول"
+          />
           <div className="grid-cols-12  grid">
             <div className="col-span-5  col-start-2">
               <MainQuestions
@@ -230,52 +253,69 @@ const HomePage = () => {
         </div>
       </div>
       <div className="container  p-xl">
+        <TitleSection
+          direction="right"
+          isAfter={true}
+          title="اسناد ما"
+          topic="اسناد ما"
+        />
         <div className=" grid  grid-cols-12      ">
-        <div className="col-span-3">
-            <Docs title="شرایط و ضوابط"   />
+          <div className="col-span-3">
+            <Docs title="شرایط و ضوابط" delay={200} />
           </div>
           <div className="col-span-3">
-            <Docs title="کاغذهای سفید" />
+            <Docs title="کاغذهای سفید"  delay={400} />
           </div>
           <div className="col-span-3">
-            <Docs title="سیاست حفظ حریم خصوصی" />
+            <Docs title="سیاست حفظ حریم خصوصی"  delay={600} />
           </div>
           <div className="col-span-3">
-            <Docs title="پروفایل تجاری" />
+            <Docs title="پروفایل تجاری"   delay={800}/>
           </div>
         </div>
       </div>
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
+      <div className="lg:container  lg:px-xl">
+        <TitleSection
+          isAfter={false}
+          topic="خانواده"
+          direction="center"
+          title="مشاوران"
+        />
+        <div className="grid  grid-cols-12  items-center  justify-center">
+          <div className="  sm:col-span-12    lg:col-span-4">
+            <Consltants
+            delay={200}
+              cover="/public/Images/consltants/personThree.png"
+              jobPosition="مدیر عامل شرکت"
+              name="شهروز کرمی"
+              socialMediaIcon="/public/Images/consltants/linkedin.svg"
+            />
+          </div>
+          <div className="  sm:col-span-12    lg:col-span-4">
+            <Consltants
+            delay={400}
+              cover="/public/Images/consltants/PersonTwo.png"
+              jobPosition="مدیر داخلی  شرکت"
+              name="رضا  فاطمی"
+              socialMediaIcon="/public/Images/consltants/faceBook.svg"
+            />
+          </div>
+          <div className="  sm:col-span-12    lg:col-span-4">
+            <Consltants
+            delay={600}
+              cover="/public/Images/consltants/personOne.jpg"
+              jobPosition="مدیر پروژه"
+              name="سعید احمدی"
+              socialMediaIcon="/public/Images/consltants/linkedin.svg"
+            />
+          </div>
+        </div>
+      </div>
+      <MyTeam />
+      <News />
+      <Collebrations />
+      <Lisenese />
+      <Footer />
     </main>
   );
 };

@@ -58,20 +58,20 @@
   background-repeat: no-repeat;
   background-size: contain;
 }
-.HowToUse  {
+.HowToUse {
   background-image: url(/public/Images/background-HowToUse.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   height: 100%;
   display: block;
-  padding: 4rem  0;
+  padding: 4rem 0;
 }
 
 .HowToUseDetails::after {
-content:url(/public/Images/HowToUse/flash.svg) ;
-position: absolute;
-left: 103px;
+  content: url(/public/Images/HowToUse/flash.svg);
+  position: absolute;
+  left: 103px;
 }
 .customLine {
   position: absolute;
@@ -94,11 +94,27 @@ left: 103px;
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
-.borderDocs  {
-  border: 1px  solid  #ccc;
+.borderDocs {
+  border: 1px solid #ccc;
 }
 .activeDoc:hover {
   transform: translateY(-10px);
-  border: 1px  solid  #000;
-  transition: all  0.25s  ease;
+  border: 1px solid #000;
+  transition: all 0.25s ease;
 }
+.cover-bg-after::after {
+  content: "";
+  background-image: url(/public/Images/consltants/bgConsltant.svg);
+  position: absolute;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 300px;
+  height: 300px;
+  top: -33px; /* تنظیم موقعیت */
+  right: -31px; /* تنظیم موقعیت */
+  z-index: -1; /* در پشت تصویر قرار بگیرد */
+}
+/* .sliderBox {
+  max-width: 200px;
+} */

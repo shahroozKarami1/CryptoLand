@@ -10,7 +10,7 @@ export default {
         inputColor: "#BE96BC",
         topicColor: "#F09791",
         titleColor: "#51475a",
-        
+        jobPosColor :  '#FFD3D7' ,   
       },
       padding: {
         DEFAULT: "1rem",

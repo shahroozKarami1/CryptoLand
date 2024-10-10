@@ -9,5 +9,86 @@
     { "id": 7, "title": "تیم", "link": "/" },
     { "id": 8, "title": "سوالات  متداول", "link": "/" },
     { "id": 9, "title": "وبلاگ", "link": "/" }
+  ],
+  "TeamWork": [
+    {
+      "id": 1,
+      "delay": 100,
+
+      "cover": "/public/Images/Team/team-member-ava-1.png",
+      "name": "بهنام رضایی",
+      "workPosition": "منابع  انسانی"
+    },
+    {
+      "id": 2,
+
+      "delay": 150,
+      "cover": "/public/Images/Team/team-member-ava-2.png",
+      "name": "نیما خانی",
+      "workPosition": "تحلیلگر"
+    },
+    {
+      "id": 3,
+
+      "delay": 200,
+      "cover": "/public/Images/Team/team-member-ava-3.png",
+      "name": "داوود  ایمانی",
+      "workPosition": "طراح"
+    },
+    {
+      "id": 4,
+      "delay": 300,
+
+      "cover": "/public/Images/Team/team-member-ava-4.png",
+      "name": "سام محسنی",
+      "workPosition": "رابط کاربری"
+    },
+    {
+      "id": 5,
+
+      "delay": 400,
+      "cover": "/public/Images/Team/team-member-ava-5.png",
+      "name": "سعید نوری",
+      "workPosition": "عملیات فنی"
+    },
+    {
+      "id": 6,
+      "delay": 500,
+
+      "cover": "/public/Images/Team/team-member-ava-7.png",
+      "name": "میلاد محمدی",
+      "workPosition": "متخصص  فرانت"
+    },
+    {
+      "id": 7,
+      "delay": 600,
+
+      "cover": "/public/Images/Team/team-member-ava-8.png",
+      "name": "مسحن زارع",
+      "workPosition": "روزنامه نگار"
+    },
+    {
+      "id": 8,
+
+      "delay": 700,
+      "cover": "/public/Images/Team/team-member-ava-10.png",
+      "name": "سامان بهادری ",
+      "workPosition": "اقتصاد دان"
+    },
+    {
+      "id": 9,
+
+      "delay": 800,
+      "cover": "/public/Images/Team/team-member-ava-11.png",
+      "name": "سینا دارابی",
+      "workPosition": "مدیر کل"
+    },
+    {
+      "id": 10,
+      "delay": 900,
+      "cover": "/public/Images/Team/team-member-ava-12.png",
+      "name": "محمدباقری",
+      "workPosition": "برنامه نویس"
+    }
   ]
 }
