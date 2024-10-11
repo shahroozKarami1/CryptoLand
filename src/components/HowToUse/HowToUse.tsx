@@ -1,4 +1,3 @@
-import React from "react";
 import HowToUseDetails from "./HowToUseDetails";
 
 function HowToUse() {

@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { IBoxNewsProps } from "../../Types/interfaces";
 
-const BoxNews: FC<IBoxNewsProps> = ({ disc, id, logo }) => {
+const BoxNews: FC<IBoxNewsProps> = ({ disc, logo }) => {
   return (
     <main>
       <div className="flex  flex-col gap-4     items-center justify-center sliderBox    ">
