@@ -6,7 +6,7 @@ const Docs: FC<IDocsProps> = ({ title  ,  delay }) => {
   return (
     <main>
       <Link to={"/"}>
-        <div className="flex justify-center  items-center borderDocs rounded-md py-5  m-5 relative  activeDoc  "  data-aos =  "fade-left"   data-aos-delay =  {delay}>
+        <div className="flex justify-center        items-center borderDocs rounded-md py-5  m-5 relative  activeDoc  "  data-aos =  "fade-left"   data-aos-delay =  {delay}>
           <span className="text-lg font-bold   ">{title}</span>
           <img
             src="/public/Images/pdfTemplete.png"

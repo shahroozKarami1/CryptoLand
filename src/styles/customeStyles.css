@@ -2,9 +2,13 @@
   background-image: url(/public/Images/HeroBackground.png);
   background-position: top;
   background-repeat: no-repeat;
-  background-size: cover;
   display: block;
   height: 100%;
+}
+@media screen and (min-width :  1000px) {
+  .hero_header--section {
+    background-size: cover;
+  }
 }
 
 /* :root {
@@ -68,11 +72,14 @@
   padding: 4rem 0;
 }
 
-.HowToUseDetails::after {
-  content: url(/public/Images/HowToUse/flash.svg);
-  position: absolute;
-  left: 103px;
+@media screen and (min-width: 900px) {
+  /* .HowToUseDetails::after {
+    content: url(/public/Images/HowToUse/flash.svg);
+    position: absolute;
+    left: 103px;
+  } */
 }
+
 .customLine {
   position: absolute;
   width: 20px;
@@ -85,8 +92,13 @@
   background-image: url(/public/Images/chart/batProgress.jpg);
   background-repeat: no-repeat;
   border-radius: 0.5rem;
-  width: 700px;
-  height: 100%;
+  max-width: 700px;
+  margin: 0  auto;
+}
+@media screen   and   (max-width: 1000px) {
+  .heartChart {
+    margin: 0 2rem;
+  }
 }
 .appContent {
   background-image: url(/public/Images/Android/bg-Phone.png);

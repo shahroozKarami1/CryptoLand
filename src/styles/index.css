@@ -15,6 +15,9 @@
   transition: all;
   border: 0;
 }
+body  {
+  overflow-x: hidden;
+}
 *::selection {
   background-color: #FFA500 !important;
   color: var(--secondary-color);

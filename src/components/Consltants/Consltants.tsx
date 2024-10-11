@@ -23,7 +23,7 @@ const Consltants: FC<IConsltantsProps> = ({
           />
           <img src={cover} className="rounded-full  " alt="" />
         </div>
-        <div className="flex  flex-col  items-center  gap-2  mt-10">
+        <div className="flex  flex-col  items-center  gap-2  mt-20">
           <span className="  text-lg">{name}</span>
           <span className="text-textColorGray">{jobPosition}</span>
         </div>

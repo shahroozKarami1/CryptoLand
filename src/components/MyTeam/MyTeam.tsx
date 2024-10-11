@@ -3,9 +3,8 @@ import { ITeamWorkData } from "../../Types/interfaces";
 import { getData } from "../../services/apiService";
 import TitleSection from "../../assets/titleSection/TitleSection";
 
-interface MyTeamProps {}
 
-const MyTeam: FC<MyTeamProps> = ({}) => {
+const MyTeam: FC = () => {
   const [dataTeamWork, setDataTeamWork] = useState<ITeamWorkData[]>([]);
   async function fetcherData() {
     try {
@@ -31,7 +30,7 @@ const MyTeam: FC<MyTeamProps> = ({}) => {
           <div className="grid  items-center  justify-center  grid-cols-12">
             {dataTeamWork.map(({ cover, id, name, workPosition   ,  delay }) => {
               return (
-                <div className="col-span-2  mb-5" key={id}   data-aos =  "fade-up"   data-aos-delay  =  {delay}>
+                <div className="lg:col-span-2  xs:col-span-6 md:col-span-4    mb-5" key={id}   data-aos =  "fade-up"   data-aos-delay  =  {delay}>
                   <div className="flex  flex-col  items-center ">
                     <img src={cover} alt="" width={"50%"} />
                     <div className="details  flex flex-col  items-center  gap-2  mt-4">

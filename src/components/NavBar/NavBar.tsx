@@ -1,11 +1,12 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { getData } from "../../services/apiService";
 import { INavLink, ISelectoptions } from "../../Types/interfaces";
-import { Link } from "react-router-dom";
 import SelectBox from "../SelectBox/SelectBox";
+import RefContext from "../../Context/RefContext";
 
 const NavBar = () => {
   let [data, setMyData] = useState<INavLink[]>([]);
+  let  MyRefs  =  useContext(RefContext)
   let [isScroll, setIsScroll] = useState(false);
   const handlerScroll = () => {
     if (window.scrollY > 70) {
@@ -43,10 +44,36 @@ const NavBar = () => {
       label: "AR",
     },
   ];
+  function  scrollInViewHandler  (title :  string) {
+   if (MyRefs?.ServicesRef?.current   &&   title === "خدمات") {
+    MyRefs?.ServicesRef?.current?.scrollIntoView({ behavior: "smooth" });
+
+   }
+   if (MyRefs?.MyTeamRef?.current  &&  MyRefs?.ServicesRef?.current   &&   title === "تیم") {
+    MyRefs?.MyTeamRef?.current?.scrollIntoView({ behavior: "smooth" });
+
+   }
+   if (MyRefs?.AboutUsRef?.current  &&  MyRefs?.AboutUsRef?.current   &&   title === "درباره ما") {
+    MyRefs?.AboutUsRef?.current?.scrollIntoView({ behavior: "smooth" });
+
+   }
+   if (MyRefs?.MapRef?.current  &&  title === "آمار") {
+      MyRefs.MapRef.current.scrollIntoView({ behavior: "smooth" });
+   }
+   if (MyRefs?.QuestionsRef?.current  &&  title === "سوالات  متداول") {
+      MyRefs.QuestionsRef.current.scrollIntoView({ behavior: "smooth" });
+   }
+   if (MyRefs?.TokenRef?.current &&  title  ===  "بلیط") {
+    MyRefs.TokenRef.current.scrollIntoView({behavior :  "smooth"})
+   }
+   if (MyRefs?.GuideRef?.current  &&  title ===  "راهنما") {
+      MyRefs.GuideRef.current.scrollIntoView({behavior : "smooth"  })
+   }
+  }
 
   return (
     <div
-      className={`container mt-4 py-2 transition-all duration-500 ease-in-out     ${
+      className={`container mt-4 py-2 transition-all duration-500 ease-in-out   xs:hidden  lg:block   ${
         isScroll ? "sticky top-0 bg-white shadow-lg" : "absolute top-0 bg-transparent"
       } z-50`}
     >
@@ -71,7 +98,7 @@ const NavBar = () => {
                     isScroll && " text-textColorGray"
                   }`}
                 >
-                  <Link to={items.link}>{items.title}</Link>
+                  <button  onClick=  {  ()  =>  scrollInViewHandler  (items.title)}>{items.title}</button>
                 </li>
               );
             })}

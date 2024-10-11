@@ -10,7 +10,7 @@ const TitleSection: FC<ITitleSectionProps> = ({
   return (
     <main>
       <div
-        className={`flex  flex-col  ${
+        className={`flex  flex-col     xs:m-5   lg:m-0  ${
           direction === "right" ? "justify-start  items-start" : "justify-center items-center"
         }   `}
       >

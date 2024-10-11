@@ -2,7 +2,7 @@
 function OfferToken() {
   return (
     <main>
-        <div  className="flex  flex-col  gap-5 mr-5  "  data-aos = "fade-left">
+        <div  className="flex  flex-col  gap-5 lg:mr-5  xs:m-5   lg:m-0 "  data-aos = "fade-left">
             <span className="text-topicColor relative  topic-styles__before font-bold">درباره ما</span>
             <h1  className="text-titleColor text-3xl font-bold   mb-4">حراج  توکن</h1>
               <table  className="flex  gap-4">
@@ -30,7 +30,7 @@ function OfferToken() {
         <h1  className="text-2xl  mt-4 ">توضیحات کلی </h1>
         <p  className="text-textColorGray  leading-8">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت  </p>
         <p  className="text-textColorGray  leading-8">    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت  </p>
-        <button className="bg-BgColor text-textColor p-2  rounded-md px-5  ">خرید توکن</button>
+        <button className="bg-BgColor text-textColor p-2  rounded-md  xs:w-full    ">خرید توکن</button>
     </div>
             
         </div>

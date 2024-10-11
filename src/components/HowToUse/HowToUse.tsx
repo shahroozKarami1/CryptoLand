@@ -7,10 +7,10 @@ function HowToUse() {
       <div className="flex  items-center  justify-center  flex-col  gap-5  pt-10">
         <span className="text-topicColor  text-lg">روند</span>
         <h1 className="text-textColor  text-4xl font-bold">
-          چگونه کار میکند ؟{" "}
+          چگونه کار میکند ؟
         </h1>
       </div>
-      <div className="  flex   items-center  justify-evenly pt-4 ">
+      <div className="  flex    lg:flex-row   xs:flex-col  items-center  justify-evenly pt-4 ">
         <HowToUseDetails
           delay={200}
           title="در حال پردازش"

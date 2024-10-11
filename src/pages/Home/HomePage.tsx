@@ -16,38 +16,43 @@ import MyTeam from "../../components/MyTeam/MyTeam";
 import News from "../../components/News/News";
 import Lisenese from "../../components/Lisenese/Lisenese";
 import Footer from "../../components/Footer/Footer";
-import Collebrations from "../../components/Collebrations/Collebrations";
 import TitleSection from "../../assets/titleSection/TitleSection";
+import { useContext } from "react";
+import RefContext from "../../Context/RefContext";
 
 const HomePage = () => {
+  let MyRefs = useContext(RefContext);
   return (
     <main className="relative">
       <HeroHeaderSection />
       <BrandSection />
-      <AboutUs
-        img="/public/Images/about-img-1.png"
-        component={
-          <TopicBox
-            topic="درباره ما"
-            title="موضوع کریپ تولند بهترین برای آی سی ا شما"
-            disc={` لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و
+      <div ref={MyRefs?.AboutUsRef}>
+        <AboutUs
+          img="/public/Images/about-img-1.png"
+          component={
+            <TopicBox
+              topic="درباره ما"
+              title="موضوع کریپ تولند بهترین برای آی سی ا شما"
+              disc={` لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و
           سطرآنچنان که لازم است  `}
-            children={
-              <ul className="list-disc  mt-8 leading-9">
-                <li className="text-textColorGray">
-                  لورم ایپسوم متن ساختگی با تولید سادگی
-                </li>
-                <li className="text-textColorGray">
-                  لورم ایپسوم متن ساختگی با تولید سادگی
-                </li>
-                <li className="text-textColorGray">
-                  لورم ایپسوم متن ساختگی با تولید سادگی
-                </li>
-              </ul>
-            }
-          />
-        }
-      />
+              children={
+                <ul className="list-disc  mt-8 leading-9">
+                  <li className="text-textColorGray">
+                    لورم ایپسوم متن ساختگی با تولید سادگی
+                  </li>
+                  <li className="text-textColorGray">
+                    لورم ایپسوم متن ساختگی با تولید سادگی
+                  </li>
+                  <li className="text-textColorGray">
+                    لورم ایپسوم متن ساختگی با تولید سادگی
+                  </li>
+                </ul>
+              }
+            />
+          }
+        />
+      </div>
+
       <AboutUs
         img="/public/Images/about-img-2.png"
         reverse={true}
@@ -72,7 +77,11 @@ const HomePage = () => {
           />
         }
       />
-      <div className="container p-lg servicesSection">
+
+      <div
+        className="lg:container lg:p-lg   xs:p-5   servicesSection"
+        ref={MyRefs?.ServicesRef}
+      >
         <TitleSection
           direction="center"
           isAfter={false}
@@ -80,7 +89,7 @@ const HomePage = () => {
           title="خدمات عالی"
         />
         <div className="grid grid-cols-12 gap-5">
-          <div className="col-span-2 col-start-3">
+          <div className="  md:col-span-6  xs:col-span-12    lg:col-span-2   lg:col-start-3">
             <ServicesSection
               delay={200}
               icon="/public/Images/servicesImage/service-icon-1.svg"
@@ -89,7 +98,7 @@ const HomePage = () => {
               desc="لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک"
             />
           </div>
-          <div className="col-span-2">
+          <div className="  md:col-span-6  xs:col-span-12    lg:col-span-2">
             <ServicesSection
               delay={400}
               icon="/public/Images/servicesImage/service-icon-2.svg"
@@ -98,7 +107,7 @@ const HomePage = () => {
               desc="لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک"
             />
           </div>
-          <div className="col-span-2">
+          <div className="  md:col-span-6  xs:col-span-12    lg:col-span-2">
             <ServicesSection
               delay={600}
               icon="/public/Images/servicesImage/service-icon-3.svg"
@@ -107,7 +116,7 @@ const HomePage = () => {
               desc="لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک"
             />
           </div>
-          <div className="col-span-2">
+          <div className="  md:col-span-6  xs:col-span-12    lg:col-span-2">
             <ServicesSection
               delay={800}
               icon="/public/Images/servicesImage/service-icon-4.svg"
@@ -120,50 +129,53 @@ const HomePage = () => {
       </div>
 
       <HowToUse />
-      <AboutUs
-        img="/public/Images/chart/graphic.png"
-        reverse={false}
-        component={
-          <TopicBox
-            topic="اطلاعات ما"
-            title="اطلاعات آماری"
-            disc={` لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است `}
-            children={
-              <ul className="list-none  mt-8 leading-9 relative">
-                <li className="text-textColorGray  font-bold   before:ml-2    before:text-green-900   ">
-                  <span
-                    className="customLine"
-                    style={{ backgroundColor: "#8761A8" }}
-                  ></span>
-                  فرمول واقعی
-                </li>
-                <li className="text-textColorGray font-bold  before:ml-2    before:text-green-900  ">
-                  <span
-                    className="customLine"
-                    style={{ backgroundColor: "#F09790" }}
-                  ></span>
-                  فرمول واقعی پیشرو
-                </li>
-                <li className="text-textColorGray  font-bold  before:ml-2    before:text-green-900 ">
-                  <span
-                    className="customLine"
-                    style={{ backgroundColor: "#FFAE57" }}
-                  ></span>
-                  کیفیت فوق العاده
-                </li>
-                <li className="text-textColorGray font-bold   before:ml-2    before:text-green-900 ">
-                  <span
-                    className="customLine"
-                    style={{ backgroundColor: "#5874CF" }}
-                  ></span>
-                  پشتیبانی سریع
-                </li>
-              </ul>
-            }
-          />
-        }
-      />
-      <div className="flex items-center  justify-evenly   px-4">
+      <div ref={MyRefs?.MapRef}>
+        <AboutUs
+          img="/public/Images/chart/graphic.png"
+          reverse={false}
+          component={
+            <TopicBox
+              topic="اطلاعات ما"
+              title="اطلاعات آماری"
+              disc={` لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است `}
+              children={
+                <ul className="list-none  mt-8 leading-9 relative">
+                  <li className="text-textColorGray  font-bold   before:ml-2    before:text-green-900   ">
+                    <span
+                      className="customLine"
+                      style={{ backgroundColor: "#8761A8" }}
+                    ></span>
+                    فرمول واقعی
+                  </li>
+                  <li className="text-textColorGray font-bold  before:ml-2    before:text-green-900  ">
+                    <span
+                      className="customLine"
+                      style={{ backgroundColor: "#F09790" }}
+                    ></span>
+                    فرمول واقعی پیشرو
+                  </li>
+                  <li className="text-textColorGray  font-bold  before:ml-2    before:text-green-900 ">
+                    <span
+                      className="customLine"
+                      style={{ backgroundColor: "#FFAE57" }}
+                    ></span>
+                    کیفیت فوق العاده
+                  </li>
+                  <li className="text-textColorGray font-bold   before:ml-2    before:text-green-900 ">
+                    <span
+                      className="customLine"
+                      style={{ backgroundColor: "#5874CF" }}
+                    ></span>
+                    پشتیبانی سریع
+                  </li>
+                </ul>
+              }
+            />
+          }
+        />
+      </div>
+
+      <div className="flex items-center  xs:flex-col  lg:flex-row  justify-evenly   px-4">
         <Statistics statistics={20.324} title="قیمت فعلی" color="#8761A8" />
         <Statistics
           statistics={0.052646}
@@ -179,7 +191,10 @@ const HomePage = () => {
       </div>
       <ChartMe />
       <div>
-        <div className="container p-xl ">
+        <div
+          className="lg:container lg:p-xl   xs:p-5 "
+          ref={MyRefs?.QuestionsRef}
+        >
           <TitleSection
             direction="center"
             isAfter={false}
@@ -187,7 +202,7 @@ const HomePage = () => {
             topic="سوالات متداول"
           />
           <div className="grid-cols-12  grid">
-            <div className="col-span-5  col-start-2">
+            <div className="lg:col-span-5  lg:col-start-2  xs:col-span-12   ">
               <MainQuestions
                 title="لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم؟"
                 disc="لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی"
@@ -201,7 +216,7 @@ const HomePage = () => {
                 disc="لورم ایپسوم متن ساختگی با تولید؟"
               />
             </div>
-            <div className="col-span-5">
+            <div className="lg:col-span-5  xs:col-span-12   ">
               <MainQuestions
                 title="لورم ایپسوم متن ساختگی با تولید سادگی؟"
                 disc="لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان"
@@ -242,35 +257,35 @@ const HomePage = () => {
           }
         />
       </div>
-      <div className="container   p-xl">
+      <div className="lg:container   lg:p-xl" ref={MyRefs?.TokenRef}>
         <div className="grid  grid-cols-12  items-stretch  gap-5">
-          <div className="col-span-6">
+          <div className="  xs:hidden  lg:block   lg:col-span-6">
             <img src="/public/Images/bg-token.png" alt="" />
           </div>
-          <div className="col-span-5">
+          <div className="  lg:col-span-5   xs:col-span-12 ">
             <OfferToken />
           </div>
         </div>
       </div>
-      <div className="container  p-xl">
+      <div className="lg:container  lg:p-xl" ref={MyRefs?.GuideRef}>
         <TitleSection
           direction="right"
           isAfter={true}
           title="اسناد ما"
           topic="اسناد ما"
         />
-        <div className=" grid  grid-cols-12      ">
-          <div className="col-span-3">
+        <div className=" grid  grid-cols-12">
+          <div className=" xs:col-span-12  md:col-span-6  lg:col-span-3">
             <Docs title="شرایط و ضوابط" delay={200} />
           </div>
-          <div className="col-span-3">
-            <Docs title="کاغذهای سفید"  delay={400} />
+          <div className=" xs:col-span-12  md:col-span-6  lg:col-span-3">
+            <Docs title="کاغذهای سفید" delay={400} />
           </div>
-          <div className="col-span-3">
-            <Docs title="سیاست حفظ حریم خصوصی"  delay={600} />
+          <div className=" xs:col-span-12  md:col-span-6  lg:col-span-3">
+            <Docs title="سیاست حفظ حریم خصوصی" delay={600} />
           </div>
-          <div className="col-span-3">
-            <Docs title="پروفایل تجاری"   delay={800}/>
+          <div className=" xs:col-span-12  md:col-span-6  lg:col-span-3">
+            <Docs title="پروفایل تجاری" delay={800} />
           </div>
         </div>
       </div>
@@ -281,28 +296,28 @@ const HomePage = () => {
           direction="center"
           title="مشاوران"
         />
-        <div className="grid  grid-cols-12  items-center  justify-center">
-          <div className="  sm:col-span-12    lg:col-span-4">
+        <div className="grid  grid-cols-12  xs:gap-10    lg:gap-0    items-center  justify-center">
+          <div className="  xs:col-span-12  md:col-span-6    lg:col-span-4">
             <Consltants
-            delay={200}
+              delay={200}
               cover="/public/Images/consltants/personThree.png"
               jobPosition="مدیر عامل شرکت"
               name="شهروز کرمی"
               socialMediaIcon="/public/Images/consltants/linkedin.svg"
             />
           </div>
-          <div className="  sm:col-span-12    lg:col-span-4">
+          <div className="   xs:col-span-12  md:col-span-6    lg:col-span-4">
             <Consltants
-            delay={400}
+              delay={400}
               cover="/public/Images/consltants/PersonTwo.png"
               jobPosition="مدیر داخلی  شرکت"
               name="رضا  فاطمی"
               socialMediaIcon="/public/Images/consltants/faceBook.svg"
             />
           </div>
-          <div className="  sm:col-span-12    lg:col-span-4">
+          <div className="    xs:col-span-12  md:col-span-6    lg:col-span-4">
             <Consltants
-            delay={600}
+              delay={600}
               cover="/public/Images/consltants/personOne.jpg"
               jobPosition="مدیر پروژه"
               name="سعید احمدی"
@@ -311,9 +326,11 @@ const HomePage = () => {
           </div>
         </div>
       </div>
-      <MyTeam />
+      <div ref={MyRefs?.MyTeamRef}>
+        <MyTeam />
+      </div>
       <News />
-      <Collebrations />
+      <BrandSection />
       <Lisenese />
       <Footer />
     </main>

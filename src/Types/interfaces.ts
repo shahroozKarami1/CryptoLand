@@ -1,5 +1,4 @@
-import { jsx } from "@emotion/react";
-import { ReactNode } from "react";
+import { ReactNode, RefObject } from "react";
 
 export interface INavLink {
   title: string;
@@ -29,14 +28,14 @@ export interface IAboutUs {
 export default interface IservicesSection {
   color: string;
   icon: string;
-  delay  :  number
+  delay: number;
   title: string;
   desc: string;
 }
 export interface HowToUseDetailsProps {
   icon: string;
   title: string;
-  delay :  number
+  delay: number;
 }
 export interface StatisticsProps {
   title: string;
@@ -49,33 +48,43 @@ export interface IMainQuestionsProps {
 }
 export interface IDocsProps {
   title: string;
-  delay :  number
+  delay: number;
 }
 export interface IConsltantsProps {
   cover: string;
   name: string;
   jobPosition: string;
   socialMediaIcon: string;
-  delay  :  number
+  delay: number;
 }
 export interface ITeamWorkData {
   id: number;
   cover: string;
   name: string;
   workPosition: string;
+  delay: number;
 }
-export interface  IBoxNewsProps {
-  id  :  number  ;  
-  disc  :  string  ; 
-  logo :  string
- }
- export  interface ILiseneseIconsProps  {
-   icon :  JSX.Element  ,  
- }
- export  interface ITitleSectionProps  {
-  topic   :  string  ;
-  title : string   ;  
-  direction  :   "center"  |  "right"  ;  
-  isAfter :  boolean
+export interface IBoxNewsProps {
+  id: number;
+  disc: string;
+  logo: string;
+}
+export interface ILiseneseIconsProps {
+  icon: JSX.Element;
+}
+export interface ITitleSectionProps {
+  topic: string;
+  title: string;
+  direction: "center" | "right";
+  isAfter: boolean;
+}
 
- }
+export interface IRefContext {
+  ServicesRef: RefObject<HTMLDivElement> | null;
+  MyTeamRef: RefObject<HTMLDivElement> | null;
+  AboutUsRef: RefObject<HTMLDivElement> | null;
+  MapRef: RefObject<HTMLDivElement> | null;
+  QuestionsRef: RefObject<HTMLDivElement> | null;
+  TokenRef  :    RefObject<HTMLDivElement>  |  null ;  
+  GuideRef  :  RefObject<HTMLDivElement>  |  null  ;  
+}

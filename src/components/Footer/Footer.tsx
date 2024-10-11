@@ -3,11 +3,11 @@ import React from "react";
 const Footer = () => {
   return (
     <main>
-      <div className="container  p-xl">
+      <div className="lg:container  lg:p-xl   xs:p-5">
         <div className="grid  grid-cols-12    items-center  justify-center">
-          <div className="col-span-6">
-            <div className="grid grid-cols-12   ">
-              <div className="col-span-3   col-start-3 ">
+          <div className=" xs:col-span-12   lg:col-span-6">
+            <div className="grid grid-cols-12   xs:gap-5  lg:gap-0 ">
+              <div className="  xs:col-span-6  lg:col-span-3   lg:col-start-3 ">
                 <ul className="flex  flex-col gap-4    text-gray-500    text-nowrap ">
                   <li>
                     <a href="">کاغذ سفید</a>
@@ -23,7 +23,7 @@ const Footer = () => {
                   </li>
                 </ul>
               </div>
-              <div className="col-span-3">
+              <div className="  xs:col-span-6  lg:col-span-3  ">
                 <ul className="flex  flex-col gap-4    text-gray-500    text-nowrap">
                   <li>
                     <a href="">درباره ما</a>
@@ -39,7 +39,7 @@ const Footer = () => {
                   </li>
                 </ul>
               </div>
-              <div className="col-span-3">
+              <div className="  xs:col-span-6  lg:col-span-3">
                 <ul className="flex  flex-col gap-4    text-gray-500    text-nowrap">
                   <li>
                     <a href="">خدمات</a>
@@ -57,7 +57,7 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          <div className="col-span-6">
+          <div className=" xs:col-span-12   lg:col-span-6  lg:mt-0  xs:mt-10">
             <div className="flex    justify-around ">
               <div className="flex  flex-col  justify-start  gap-2">
                 <span className="text-lg  text-gray-500">تهران جنت آباد</span>

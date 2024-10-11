@@ -11,7 +11,7 @@ const TopicBox: FC<TopicBoxProps> = ({ children, title, topic, disc }) => {
         <h1 className="text-titleColor font-extrabold leading-relaxed text-4xl  pb-10 pt-2">
           {title}
         </h1>
-        <p className="text-textColorGray leading-8 ">{disc}</p>
+        <p className="text-textColorGray leading-8   xs:text-textColor   lg:text-textColorGray">{disc}</p>
         <div>{children}</div>
       </div>
     </main>
