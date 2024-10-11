@@ -18,6 +18,7 @@ export interface TopicBoxProps {
   topic: string;
   children: ReactNode;
   disc: string;
+  whiteColor?: boolean;
 }
 
 export interface IAboutUs {
@@ -85,6 +86,6 @@ export interface IRefContext {
   AboutUsRef: RefObject<HTMLDivElement> | null;
   MapRef: RefObject<HTMLDivElement> | null;
   QuestionsRef: RefObject<HTMLDivElement> | null;
-  TokenRef  :    RefObject<HTMLDivElement>  |  null ;  
-  GuideRef  :  RefObject<HTMLDivElement>  |  null  ;  
+  TokenRef: RefObject<HTMLDivElement> | null;
+  GuideRef: RefObject<HTMLDivElement> | null;
 }

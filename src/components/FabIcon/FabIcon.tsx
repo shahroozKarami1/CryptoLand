@@ -6,7 +6,6 @@ const CustomBox = styled(Box)({
   position: "fixed",
   bottom: "50px",
   left: "50px",
-  zIndex: "999",
 });
 const FabIcon = () => {
   let [isFab, setIsFab] = useState(false);
